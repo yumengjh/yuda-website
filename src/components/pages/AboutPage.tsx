@@ -147,7 +147,7 @@ export function AboutPage() {
 					<div key={value.word} className="value-row">
 						<div className="value-word" data-value-word>
 							<span className="value-cjk">{value.word}</span>
-							<span className="value-latin serif">{value.latin}</span>
+							<span className="value-latin num">{value.latin}</span>
 						</div>
 						<p className="value-body shell" data-reveal>
 							{value.body}

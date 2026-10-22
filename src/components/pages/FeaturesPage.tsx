@@ -106,7 +106,7 @@ export function FeaturesPage() {
 				<div className="modules-list">
 					{copy.modules.map((module) => (
 						<article key={module.title} className="module" data-module>
-							<span className="module-tag serif">{module.tag}</span>
+							<span className="module-tag num">{module.tag}</span>
 							<h2 className="module-title" data-reveal>
 								{module.title}
 							</h2>
@@ -138,7 +138,7 @@ export function FeaturesPage() {
 					<div className="modules-sticky">
 						<div className="stage-counter">
 							<span className="stage-digit-mask">
-								<span className="serif" data-stage-digit>
+								<span className="num" data-stage-digit>
 									01
 								</span>
 							</span>
@@ -185,7 +185,7 @@ export function FeaturesPage() {
 					{copy.tech.items.map((item, index) => (
 						<div key={item.title} data-reveal>
 							<Tilt className="tech-card">
-								<span className="tech-index serif">0{index + 1}</span>
+								<span className="tech-index num">0{index + 1}</span>
 								<h3 className="tech-title">{item.title}</h3>
 								<p className="tech-body">{item.body}</p>
 							</Tilt>

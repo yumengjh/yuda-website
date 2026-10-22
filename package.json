@@ -28,7 +28,10 @@
     "check": "biome check"
   },
   "dependencies": {
-    "@fontsource/instrument-serif": "5.3.0",
+    "@chinese-fonts/dyh": "3.0.0",
+    "@fontsource/noto-sans-sc": "5.3.1",
+    "@fontsource/space-mono": "5.3.0",
+    "@fontsource/unbounded": "5.3.0",
     "@gsap/react": "2.1.2",
     "@resvg/resvg-js": "2.6.2",
     "@tailwindcss/vite": "4.3.3",

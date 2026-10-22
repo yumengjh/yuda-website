@@ -26,6 +26,19 @@
 
 宽屏与窄屏分别用 `gsap.matchMedia()` 编排：横向固定滚动、全屏展开、功能页固定画面只在宽屏启用，手机上改为纵向排布。系统开启“减少动态效果”时跳过开场、转场与滚动动画，内容直接可见。
 
+## 字体
+
+全部自托管（国内访问不依赖 Google Fonts），按 `unicode-range` 切片，浏览器只下载页面用到的字。
+
+| 用途 | 字体 | 包 |
+| --- | --- | --- |
+| 中文标题、正文大字 | 得意黑 Smiley Sans（OFL） | `@chinese-fonts/dyh` |
+| 英文标题、数字、Logo 字标 | Unbounded | `@fontsource/unbounded` |
+| 标签、编号等小字 | Space Mono | `@fontsource/space-mono` |
+| 正文 | 苹方（Apple 设备自带），其他设备用思源黑体 Noto Sans SC | `@fontsource/noto-sans-sc` |
+
+字体变量在 `src/styles/tokens/theme.css`，哪些元素用哪种字在 `src/styles.css` 末尾的 “Type system” 一节。得意黑只有一个字重，标题不要再加粗；Unbounded 的轮廓有重叠，描边空心字只用于中文，英文第二行改为品牌蓝实心。
+
 ## 文案与素材
 
 - 页面文案在 `src/i18n/locales/zh.ts` 与 `en.ts`，按页面分组；页面通过 `useCopy()` 读取，导航等界面文字仍走 `t()`。

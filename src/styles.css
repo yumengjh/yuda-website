@@ -1,6 +1,11 @@
 @import "tailwindcss";
-@import "@fontsource/instrument-serif/400.css";
-@import "@fontsource/instrument-serif/400-italic.css";
+@import "@chinese-fonts/dyh/dist/SmileySans-Oblique/result.css";
+@import "@fontsource/unbounded/latin-500.css";
+@import "@fontsource/unbounded/latin-800.css";
+@import "@fontsource/space-mono/latin-400.css";
+@import "@fontsource/space-mono/latin-700.css";
+@import "@fontsource/noto-sans-sc/400.css";
+@import "@fontsource/noto-sans-sc/700.css";
 @import "./styles/tokens/theme.css";
 
 /* ---------- Base ---------- */
@@ -81,10 +86,10 @@ ol {
   width: min(100% - 2.5rem, 84rem);
   margin-inline: auto;
 }
-.serif {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 400;
+.num {
+  font-family: var(--font-num);
+  font-weight: 800;
+  font-style: normal;
 }
 .inverse {
   background: var(--c-inv-bg);
@@ -385,9 +390,8 @@ button:hover .roll > span {
 }
 .intro-counter {
   color: #f3f0e8;
-  font-family: var(--font-serif);
+  font-family: var(--font-num);
   font-size: clamp(3rem, 9vw, 7rem);
-  font-style: italic;
   line-height: 0.9;
   letter-spacing: 0;
 }
@@ -632,9 +636,8 @@ button:hover .roll > span {
   color: var(--c-primary);
 }
 .mobile-menu-index {
-  font-family: var(--font-serif);
+  font-family: var(--font-num);
   font-size: 1rem;
-  font-style: italic;
   font-weight: 400;
   color: var(--c-inv-text-2);
 }
@@ -874,9 +877,8 @@ button:hover .roll > span {
 .process-number {
   display: block;
   color: var(--c-lilac);
-  font-family: var(--font-serif);
+  font-family: var(--font-num);
   font-size: clamp(4.5rem, 9vw, 8rem);
-  font-style: italic;
   line-height: 1;
 }
 .process-tag {
@@ -1102,9 +1104,8 @@ button:hover .roll > span {
 .promise-index {
   grid-row: span 2;
   color: var(--c-primary);
-  font-family: var(--font-serif);
+  font-family: var(--font-num);
   font-size: 1.6rem;
-  font-style: italic;
   line-height: 1.1;
 }
 .promise-title {
@@ -1475,7 +1476,7 @@ button:hover .roll > span {
   font-weight: 700;
 }
 .plan-amount {
-  font-family: var(--font-serif);
+  font-family: var(--font-num);
   font-size: clamp(4rem, 6vw, 5.4rem);
   font-weight: 400;
   line-height: 1;
@@ -1790,9 +1791,8 @@ button:hover .roll > span {
   display: flex;
   justify-content: center;
   margin-top: clamp(3rem, 6vw, 5rem);
-  font-family: var(--font-serif);
+  font-family: var(--font-num);
   font-size: clamp(8rem, 32vw, 30rem);
-  font-style: italic;
   line-height: 0.82;
   letter-spacing: -0.03em;
   user-select: none;
@@ -2009,5 +2009,150 @@ button:hover .roll > span {
   }
   .intro {
     display: none;
+  }
+}
+
+/* ---------- Type system ----------
+ * 得意黑 (Smiley Sans) carries Chinese headlines, Unbounded the Latin and figures in the
+ * same slots, Space Mono the small labels. The display faces ship one weight, so this
+ * block resets the per-component weights above to avoid synthetic bold.
+ */
+.display,
+.title,
+.marquee-row,
+.manifesto-text,
+.process-title,
+.module-title,
+.promise-title,
+.plan-name,
+.value-cjk,
+.refuse-item,
+.curtain-title,
+.footer-slogan,
+.mobile-menu-row a,
+.brand-word,
+.cta-sub,
+.not-found-code,
+.chip {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-synthesis: none;
+}
+.display {
+  line-height: 0.92;
+  letter-spacing: -0.015em;
+}
+.display:lang(en) {
+  font-size: clamp(2.8rem, 8.4vw, 8rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+.hero-title:lang(en) {
+  font-size: clamp(3rem, 10vw, 9.5rem);
+}
+.title:lang(en),
+.manifesto-text:lang(en),
+.marquee-row:lang(en) {
+  letter-spacing: -0.04em;
+}
+.hollow {
+  color: transparent;
+  -webkit-text-stroke: clamp(1px, 0.12vw, 2px) var(--c-text);
+}
+.process-number,
+.stage-digit-mask,
+.tech-index,
+.module-tag,
+.promise-index,
+.plan-amount,
+.plan-currency,
+.intro-counter,
+.footer-word,
+.value-latin,
+.mobile-menu-index {
+  font-family: var(--font-num);
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+.value-latin,
+.mobile-menu-index,
+.module-tag,
+.promise-index {
+  font-weight: 500;
+}
+.eyebrow,
+.process-tag,
+.footer-heading,
+.plan-draft,
+.billing-save,
+.hero-foot,
+.intro-meta,
+.stage-total,
+.cta-note,
+.lab-hint,
+.pill-toggle,
+.hero-badge {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+.eyebrow {
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+}
+
+/* Second headline line: outlined and pushed right for an off-grid, editorial rhythm. */
+.line-mask--offset {
+  padding-left: 0.9em;
+}
+.line-mask--offset .hollow {
+  transition: color 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.display:hover .hollow {
+  color: var(--c-primary);
+  -webkit-text-stroke-color: var(--c-primary);
+}
+.hero-flow {
+  margin-top: 1.25rem;
+  padding-left: 0.2rem;
+  color: var(--c-text-2);
+  font-family: var(--font-mono);
+  font-size: clamp(0.72rem, 1vw, 0.85rem);
+  letter-spacing: 0.08em;
+}
+.hero-vertical {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: max(0.75rem, calc((100vw - 88rem) / 2));
+  color: var(--c-text-2);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.24em;
+  writing-mode: vertical-rl;
+  transform: translateY(-50%);
+}
+@media (max-width: 767px) {
+  .line-mask--offset {
+    padding-left: 0.6em;
+  }
+  .hero-vertical {
+    display: none;
+  }
+}
+
+/* Unbounded's contours overlap, so Latin second lines are filled in the brand blue instead of outlined. */
+.hollow:lang(en) {
+  color: var(--c-primary);
+  -webkit-text-stroke: 0;
+}
+.footer-word {
+  font-size: clamp(5rem, 24vw, 22rem);
+  letter-spacing: -0.06em;
+}
+@media (max-width: 767px) {
+  .hero-title:lang(zh-CN) {
+    font-size: clamp(4.5rem, 21vw, 7rem);
   }
 }

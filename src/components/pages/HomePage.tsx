@@ -350,12 +350,20 @@ export function HomePage() {
 						{copy.hero.eyebrow}
 					</p>
 					<h1 className="display hero-title" data-hero-title>
-						{copy.hero.lines.map((line) => (
-							<span key={line} className="line-mask">
-								<span data-hero-line>{line}</span>
+						{copy.hero.lines.map((line, index) => (
+							<span
+								key={line}
+								className={`line-mask${index ? " line-mask--offset" : ""}`}
+							>
+								<span data-hero-line className={index ? "hollow" : undefined}>
+									{line}
+								</span>
 							</span>
 						))}
 					</h1>
+					<p className="hero-flow" data-hero-fade aria-hidden="true">
+						( {copy.hero.flow} )
+					</p>
 					<div className="hero-copy" data-hero-copy>
 						<p className="lead" data-hero-fade>
 							{copy.hero.sub}
@@ -382,6 +390,9 @@ export function HomePage() {
 						</div>
 					</div>
 				</div>
+				<p className="hero-vertical" aria-hidden="true">
+					YUDA — DIGITAL WARDROBE — 鱼搭
+				</p>
 				<div className="hero-foot shell" data-hero-fade>
 					<span className="hero-badge">{copy.hero.badge}</span>
 					<span className="scroll-cue">

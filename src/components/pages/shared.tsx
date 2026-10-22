@@ -49,9 +49,14 @@ export function PageHero({
 				{eyebrow}
 			</p>
 			<h1 className="display page-hero-title">
-				{lines.map((line) => (
-					<span key={line} className="line-mask">
-						<span data-hero-line>{line}</span>
+				{lines.map((line, index) => (
+					<span
+						key={line}
+						className={`line-mask${index ? " line-mask--offset" : ""}`}
+					>
+						<span data-hero-line className={index ? "hollow" : undefined}>
+							{line}
+						</span>
 					</span>
 				))}
 			</h1>
@@ -147,7 +152,7 @@ export function CtaBlock({
 					</span>
 				</h2>
 				{sub ? (
-					<p className="cta-sub serif" data-cta-fade>
+					<p className="cta-sub num" data-cta-fade>
 						{sub}
 					</p>
 				) : null}

@@ -45,6 +45,7 @@ export const en: Messages = {
 			primary: "Open Yuda",
 			secondary: "See how it works",
 			scroll: "Scroll",
+			flow: "Snap → Sort → Keep → Wear",
 			badge: "Phone · Desktop · PWA",
 		},
 		marquee: [

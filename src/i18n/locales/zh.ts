@@ -43,6 +43,7 @@ export const zh = {
 			primary: "进入鱼搭",
 			secondary: "看看怎么用",
 			scroll: "向下滚动",
+			flow: "拍照 → 识别 → 入柜 → 穿搭",
 			badge: "手机 · 桌面 · PWA",
 		},
 		marquee: [
