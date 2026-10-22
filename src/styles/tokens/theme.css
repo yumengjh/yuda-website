@@ -1,0 +1,86 @@
+@theme {
+	--font-sans:
+		"PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system,
+		BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	--font-serif:
+		"Instrument Serif", "Songti SC", "Noto Serif SC", Georgia, serif;
+}
+
+/* Brand palette comes from the logo: cream body, electric blue cap, lilac ribbon, ink outline. */
+:root,
+:root[data-theme="light"] {
+	--c-bg: #f3f0e8;
+	--c-bg-1: #ebe6da;
+	--c-bg-2: #e0d9ca;
+	--c-surface: #fbf8f1;
+	--c-text: #121214;
+	--c-text-2: #5c5952;
+	--c-text-3: #b4ada0;
+	--c-border: rgba(18, 18, 20, 0.12);
+	--c-primary: #1f5bff;
+	--c-primary-hover: #3a6fff;
+	--c-primary-text: #fff;
+	--c-lilac: #d7b6ff;
+	--c-cream: #fbf8ef;
+	--c-ink: #0d0d0f;
+	--c-inv-bg: #0d0d0f;
+	--c-inv-text: #f3f0e8;
+	--c-inv-text-2: #8f8b83;
+	--c-navigation-progress: #1f5bff;
+	--c-focus: #1f5bff;
+	--c-shadow: rgba(30, 24, 12, 0.08);
+	--c-shadow-lg: rgba(30, 24, 12, 0.18);
+	--c-grain-opacity: 0.05;
+}
+
+:root[data-theme="dark"] {
+	--c-bg: #0d0d0f;
+	--c-bg-1: #161619;
+	--c-bg-2: #212126;
+	--c-surface: #18181c;
+	--c-text: #f1ede4;
+	--c-text-2: #a19d94;
+	--c-text-3: #45433f;
+	--c-border: rgba(241, 237, 228, 0.12);
+	--c-primary: #5b86ff;
+	--c-primary-hover: #7a9dff;
+	--c-primary-text: #fff;
+	--c-lilac: #c9a2ff;
+	--c-cream: #fbf8ef;
+	--c-ink: #0d0d0f;
+	--c-inv-bg: #f1ede4;
+	--c-inv-text: #0d0d0f;
+	--c-inv-text-2: #6a665e;
+	--c-navigation-progress: #5b86ff;
+	--c-focus: #7a9dff;
+	--c-shadow: rgba(0, 0, 0, 0.35);
+	--c-shadow-lg: rgba(0, 0, 0, 0.6);
+	--c-grain-opacity: 0.07;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme]) {
+		--c-bg: #0d0d0f;
+		--c-bg-1: #161619;
+		--c-bg-2: #212126;
+		--c-surface: #18181c;
+		--c-text: #f1ede4;
+		--c-text-2: #a19d94;
+		--c-text-3: #45433f;
+		--c-border: rgba(241, 237, 228, 0.12);
+		--c-primary: #5b86ff;
+		--c-primary-hover: #7a9dff;
+		--c-primary-text: #fff;
+		--c-lilac: #c9a2ff;
+		--c-cream: #fbf8ef;
+		--c-ink: #0d0d0f;
+		--c-inv-bg: #f1ede4;
+		--c-inv-text: #0d0d0f;
+		--c-inv-text-2: #6a665e;
+		--c-navigation-progress: #5b86ff;
+		--c-focus: #7a9dff;
+		--c-shadow: rgba(0, 0, 0, 0.35);
+		--c-shadow-lg: rgba(0, 0, 0, 0.6);
+		--c-grain-opacity: 0.07;
+	}
+}
