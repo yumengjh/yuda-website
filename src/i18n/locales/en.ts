@@ -166,11 +166,22 @@ export const en: Messages = {
 			eyebrow: "Reasons",
 			title: "Every outfit explains itself.",
 			body: "Season, style, formality, the pieces you love and the ones you avoid — each score is listed. When something is uncertain, it says so: “No temperature given, assuming autumn from the date.”",
+			headline: { label: "Pick #1", score: 100, unit: "pts" },
+			hint: "Keep scrolling",
 			chips: [
-				"Pick #2 · 97.0 pts",
-				"Season = autumn ✓",
-				"You like sneakers with jeans +2.4",
+				"Style = commute / formal ✓",
+				"Formality suits the office",
 				"No temperature given, assuming autumn",
+			],
+		},
+		reel: {
+			eyebrow: "Three for one day",
+			title: "Several outfits at once, each with its reasons.",
+			hint: "Swipe sideways for more",
+			items: [
+				"Blue + black · commute · 100 pts",
+				"Grey · casual · 99 pts",
+				"Black + brown · casual · 97 pts",
 			],
 		},
 		lab: {

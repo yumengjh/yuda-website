@@ -13,6 +13,7 @@ import { useSmoothScroll } from "../motion/SmoothScroll";
 import { Sticker, type StickerKind } from "../Sticker";
 import { OotdLooks } from "./OotdLooks";
 import { PromoFilm } from "./PromoFilm";
+import { ReasonReel } from "./ReasonReel";
 import { StickerLab } from "./StickerLab";
 import { CtaBlock } from "./shared";
 
@@ -270,16 +271,16 @@ export function HomePage() {
 			media.add("(min-width: 768px)", () => {
 				const stage = q("[data-expand]")[0];
 				if (!stage) return;
-				gsap
-					.timeline({
-						scrollTrigger: {
-							trigger: stage,
-							start: "top top",
-							end: "+=140%",
-							pin: true,
-							scrub: 1,
-						},
-					})
+				const stageTimeline = gsap.timeline({
+					scrollTrigger: {
+						trigger: stage,
+						start: "top top",
+						end: "+=180%",
+						pin: true,
+						scrub: 1,
+					},
+				});
+				stageTimeline
 					.fromTo(
 						q("[data-expand-media]"),
 						{ clipPath: "inset(16% 24% 16% 24% round 28px)" },
@@ -301,6 +302,41 @@ export function HomePage() {
 							ease: "back.out(2)",
 						},
 						0.45,
+					);
+				const scoreEl = q("[data-score]")[0];
+				if (scoreEl) {
+					const target = Number(scoreEl.dataset.score);
+					const counter = { value: 0 };
+					scoreEl.textContent = "0";
+					stageTimeline.fromTo(
+						counter,
+						{ value: 0 },
+						{
+							value: target,
+							duration: 0.9,
+							ease: "none",
+							onUpdate: () => {
+								scoreEl.textContent = String(Math.round(counter.value));
+							},
+						},
+						0.45,
+					);
+				}
+				// The hint fades out as soon as the scroll takes over; chips keep drifting.
+				stageTimeline
+					.to(
+						q("[data-expand-hint]"),
+						{ opacity: 0, y: -14, duration: 0.25, ease: "none" },
+						0.2,
+					)
+					.to(
+						q("[data-chip]"),
+						{
+							y: (index: number) => (index % 2 ? -42 : 42),
+							duration: 0.9,
+							ease: "none",
+						},
+						1.35,
 					);
 			});
 
@@ -515,13 +551,29 @@ export function HomePage() {
 					/>
 				</div>
 				<ul className="expand-chips">
+					<li className="chip chip--0" data-chip>
+						{copy.expand.headline.label} ·{" "}
+						<span
+							className="chip-score"
+							data-score={copy.expand.headline.score}
+						>
+							{copy.expand.headline.score}
+						</span>{" "}
+						{copy.expand.headline.unit}
+					</li>
 					{copy.expand.chips.map((chip, index) => (
-						<li key={chip} className={`chip chip--${index}`} data-chip>
+						<li key={chip} className={`chip chip--${index + 1}`} data-chip>
 							{chip}
 						</li>
 					))}
 				</ul>
+				<p className="expand-hint" data-expand-hint aria-hidden="true">
+					{copy.expand.hint}
+					<span className="expand-hint-arrow" />
+				</p>
 			</section>
+
+			<ReasonReel copy={copy.reel} />
 
 			<StickerLab copy={copy.lab} />
 
