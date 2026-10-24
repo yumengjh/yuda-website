@@ -17,6 +17,21 @@ const config = defineConfig(({ mode }) => ({
 		devtools(),
 		nitro({
 			serverDir: "server",
+			prerender: {
+				crawlLinks: true,
+				routes: [
+					"/",
+					"/en",
+					"/features",
+					"/en/features",
+					"/pricing",
+					"/en/pricing",
+					"/about",
+					"/en/about",
+					"/sitemap.xml",
+					"/robots.txt",
+				],
+			},
 			routeRules: {
 				"/**": {
 					headers: getSecurityHeaders(mode === "production"),
