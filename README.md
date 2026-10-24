@@ -43,7 +43,9 @@
 
 - 页面文案在 `src/i18n/locales/zh.ts` 与 `en.ts`，按页面分组；页面通过 `useCopy()` 读取，导航等界面文字仍走 `t()`。
 - 价格方案改 `pricing.plans` 与 `pricing.compare` 即可，两种语言需同步。
-- 产品截图在 `public/shots/`，来自仓库 `docs/readme/`；手机截图由 `mobile.jpg` 裁成三张。
+- 产品截图在 `public/shots/`，来自业务前端仓库 `docs/readme/`；手机截图由 `mobile.jpg` 裁成三张。
+- OOTD 上身图在 `public/ootd/`（12 张，640×960 webp），人物均为 AI 生成的虚拟模特；图名和文案在 `home.looks`。
+- 宣传片不放进仓库，地址用 `VITE_SITE_PROMO_VIDEO_URL` 指向 CDN，封面是 `public/shots/promo-poster.jpg`。
 
 ## 开发与构建
 

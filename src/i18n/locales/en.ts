@@ -59,6 +59,79 @@ export const en: Messages = {
 		],
 		manifesto:
 			"The more clothes you own, the less you seem to wear. Yuda first shows you what you actually have, then picks today's outfit from it — no guessing, and every look comes with its reasons.",
+		looks: {
+			eyebrow: "OOTD try-on",
+			title: "See it on a body before you decide.",
+			body: "Young women, young men and mature men — from cute to office-ready, every outfit in a wardrobe can become a try-on preview.",
+			note: "All people shown are AI-generated virtual models; the clothes come from a real wardrobe.",
+			items: [
+				{
+					src: "/ootd/c02.webp",
+					label: "Blue polka-dot dress",
+					who: "Young woman",
+				},
+				{
+					src: "/ootd/c03.webp",
+					label: "Sailor top and pleated skirt",
+					who: "Young woman",
+				},
+				{
+					src: "/ootd/c04.webp",
+					label: "Pink lace sailor top",
+					who: "Young woman",
+				},
+				{
+					src: "/ootd/f01.webp",
+					label: "White tee and jeans",
+					who: "Young woman",
+				},
+				{
+					src: "/ootd/f02.webp",
+					label: "Varsity jacket and jeans",
+					who: "Young woman",
+				},
+				{ src: "/ootd/f06.webp", label: "Track set", who: "Young woman" },
+				{
+					src: "/ootd/y05.webp",
+					label: "Varsity hoodie and cargo pants",
+					who: "Young man",
+				},
+				{
+					src: "/ootd/y06.webp",
+					label: "Leather jacket and washed jeans",
+					who: "Young man",
+				},
+				{
+					src: "/ootd/y07.webp",
+					label: "Black tee and cargo pants",
+					who: "Young man",
+				},
+				{
+					src: "/ootd/m02.webp",
+					label: "White shirt and black trousers",
+					who: "Mature man",
+				},
+				{
+					src: "/ootd/m03.webp",
+					label: "Light-blue shirt and beige trousers",
+					who: "Mature man",
+				},
+				{
+					src: "/ootd/m04.webp",
+					label: "Leather jacket and jeans",
+					who: "Mature man",
+				},
+			],
+		},
+		film: {
+			eyebrow: "Promo film",
+			title: "Two minutes to see how Yuda works.",
+			body: "From snapping a photo to today's outfit to a try-on preview, in one film.",
+			play: "Play the promo film",
+			posterAlt:
+				"Yuda promo film cover: the Yuda logo and the tagline Collect, Match, Try on",
+			fallback: "Your browser does not support video playback.",
+		},
 		process: {
 			eyebrow: "How it works",
 			title: "From a single photo to a full outfit.",

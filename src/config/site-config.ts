@@ -7,6 +7,8 @@ export interface PublicSiteEnvironment extends Record<string, unknown> {
 	VITE_SITE_NAVIGATION_PROGRESS?: string;
 	VITE_SITE_NAVIGATION_PROGRESS_DELAY_MS?: string;
 	VITE_SITE_OG_IMAGE?: string;
+	VITE_SITE_PROMO_POSTER?: string;
+	VITE_SITE_PROMO_VIDEO_URL?: string;
 	VITE_SITE_TITLE_SEPARATOR?: string;
 	VITE_SITE_URL?: string;
 }
@@ -19,6 +21,8 @@ const defaults = {
 	author: "鱼搭",
 	appUrl: "https://yuda.yumg.cn/",
 	ogImage: "/og-default.png",
+	promoVideoUrl: "https://cdntc.yumg.cn/yuda/yuda-promo.mp4",
+	promoPoster: "/shots/promo-poster.jpg",
 	githubUrl: "https://github.com/your-org/your-project",
 	titleSeparator: " | ",
 	navigationProgress: true,
@@ -69,6 +73,14 @@ export function createSiteConfig(
 		author: configuredValue(env.VITE_SITE_AUTHOR, defaults.author),
 		appUrl: configuredValue(env.VITE_SITE_APP_URL, defaults.appUrl),
 		ogImage: configuredValue(env.VITE_SITE_OG_IMAGE, defaults.ogImage),
+		promoVideoUrl: configuredValue(
+			env.VITE_SITE_PROMO_VIDEO_URL,
+			defaults.promoVideoUrl,
+		),
+		promoPoster: configuredValue(
+			env.VITE_SITE_PROMO_POSTER,
+			defaults.promoPoster,
+		),
 		githubUrl: configuredValue(env.VITE_SITE_GITHUB_URL, defaults.githubUrl),
 		titleSeparator: configuredTitleSeparator(
 			env.VITE_SITE_TITLE_SEPARATOR,

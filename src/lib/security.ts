@@ -6,6 +6,7 @@ export function getSecurityHeaders(isProduction: boolean) {
 			"form-action 'self'",
 			"frame-ancestors 'none'",
 			"img-src 'self' data: https:",
+			"media-src 'self' https:",
 			"script-src 'self' 'unsafe-inline'",
 			"style-src 'self' 'unsafe-inline'",
 			"font-src 'self' data: https:",

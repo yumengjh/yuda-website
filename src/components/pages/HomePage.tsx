@@ -11,6 +11,8 @@ import {
 import { Magnetic } from "../motion/Magnetic";
 import { useSmoothScroll } from "../motion/SmoothScroll";
 import { Sticker, type StickerKind } from "../Sticker";
+import { OotdLooks } from "./OotdLooks";
+import { PromoFilm } from "./PromoFilm";
 import { StickerLab } from "./StickerLab";
 import { CtaBlock } from "./shared";
 
@@ -442,6 +444,8 @@ export function HomePage() {
 				</p>
 			</section>
 
+			<PromoFilm copy={copy.film} />
+
 			<section id="process" className="process inverse" data-process>
 				<div className="process-head shell">
 					<p className="eyebrow">{copy.process.eyebrow}</p>
@@ -520,6 +524,8 @@ export function HomePage() {
 			</section>
 
 			<StickerLab copy={copy.lab} />
+
+			<OotdLooks copy={copy.looks} />
 
 			<section className="mobile-showcase shell">
 				<div className="mobile-copy">

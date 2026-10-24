@@ -9,6 +9,8 @@ describe("createSiteConfig", () => {
 			appUrl: "https://yuda.yumg.cn/",
 			url: "https://example.com",
 			ogImage: "/og-default.png",
+			promoVideoUrl: "https://cdntc.yumg.cn/yuda/yuda-promo.mp4",
+			promoPoster: "/shots/promo-poster.jpg",
 			titleSeparator: " | ",
 			navigationProgress: true,
 			navigationProgressDelayMs: 120,

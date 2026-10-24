@@ -2156,3 +2156,131 @@ button:hover .roll > span {
     font-size: clamp(4.5rem, 21vw, 7rem);
   }
 }
+
+/* ---------- Home: promo film ---------- */
+.film {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  padding: clamp(3rem, 8vw, 7rem) 0;
+}
+.film-head {
+  display: grid;
+  gap: 1.25rem;
+}
+.film-frame {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border-radius: clamp(0.75rem, 2vw, 1.75rem);
+  background: #05060a;
+  box-shadow: 0 2rem 5rem -2rem rgb(0 0 0 / 0.45);
+}
+.film-poster,
+.film-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.film-poster {
+  position: relative;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.film-poster img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.film-poster:hover img,
+.film-poster:focus-visible img {
+  transform: scale(1.025);
+}
+.film-poster:focus-visible {
+  outline: 3px solid var(--c-text);
+  outline-offset: -3px;
+}
+.film-play {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  display: grid;
+  width: clamp(3.75rem, 8vw, 5.5rem);
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff;
+  color: #0d0d0f;
+  box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 0.35);
+  translate: -50% -50%;
+  transition: scale 0.25s ease;
+}
+.film-poster:hover .film-play,
+.film-poster:focus-visible .film-play {
+  scale: 1.08;
+}
+.film-play svg {
+  translate: 6% 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .film-poster img,
+  .film-play {
+    transition: none;
+  }
+}
+
+/* ---------- Home: OOTD looks ---------- */
+.looks {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  padding: clamp(3rem, 8vw, 7rem) 0;
+}
+.looks-head {
+  display: grid;
+  gap: 1.25rem;
+}
+.looks-track {
+  display: flex;
+  gap: clamp(0.75rem, 1.6vw, 1.25rem);
+  margin: 0;
+  padding: 0 max(1.25rem, calc((100% - 84rem) / 2));
+  list-style: none;
+  overflow-x: auto;
+  scroll-padding-inline: max(1.25rem, calc((100% - 84rem) / 2));
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+}
+.looks-track::-webkit-scrollbar {
+  display: none;
+}
+.look {
+  flex: 0 0 clamp(11rem, 22vw, 17rem);
+  scroll-snap-align: start;
+}
+.look img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  border-radius: clamp(0.75rem, 1.4vw, 1.25rem);
+  background: var(--c-surface, #f1f2f4);
+  object-fit: cover;
+}
+.look-who {
+  margin-top: 0.75rem;
+  color: var(--c-text-2);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+.look-label {
+  margin-top: 0.15rem;
+  font-size: 0.98rem;
+  font-weight: 650;
+}
+.looks-note {
+  color: var(--c-text-2);
+  font-size: 0.82rem;
+}
