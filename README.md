@@ -1,6 +1,6 @@
 # 鱼搭官网
 
-鱼搭的产品官网，基于 [tanstack-start](https://github.com/yumengjh/tanstack-start) 启动模板（TanStack Start + React 19 + Nitro SSR + Tailwind CSS 4）。和仓库根目录的 Vue 用户端相互独立：自己的依赖、构建和产物，根目录的 Ant Design Vue 约定不适用于这里。
+鱼搭的产品官网，基于 [tanstack-start](https://github.com/yumengjh/tanstack-start) 启动模板（TanStack Start + React 19 + Nitro SSR + Tailwind CSS 4）。独立仓库，和鱼搭 Vue 用户端（smart-closet）互不依赖：自己的依赖、构建和产物，用户端的 Ant Design Vue 约定不适用于这里。
 
 ## 页面
 

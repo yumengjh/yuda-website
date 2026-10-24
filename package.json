@@ -1,6 +1,6 @@
 {
   "name": "yuda-website",
-  "license": "SEE LICENSE IN ../LICENSE",
+  "license": "SEE LICENSE IN LICENSE",
   "version": "0.1.0",
   "private": true,
   "type": "module",
