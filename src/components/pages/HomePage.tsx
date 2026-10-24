@@ -546,8 +546,8 @@ export function HomePage() {
 						src="/shots/rec-explain.jpg"
 						alt={copy.expand.title}
 						loading="lazy"
-						width={1100}
-						height={687}
+						width={1600}
+						height={900}
 					/>
 				</div>
 				<ul className="expand-chips">

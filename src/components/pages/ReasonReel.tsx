@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
+import { useDragScroll } from "../motion/useDragScroll";
 
 interface ReasonReelCopy {
 	eyebrow: string;
@@ -12,51 +13,7 @@ const cards = [1, 2, 3, 4, 5, 6, 7].map((n) => `/shots/reason-${n}.webp`);
 /** Real recommendation cards in a sideways scroller, with a hint, a progress bar and mouse dragging. */
 export function ReasonReel({ copy }: { copy: ReasonReelCopy }) {
 	const track = useRef<HTMLDivElement>(null);
-	const [progress, setProgress] = useState(0);
-	const [moved, setMoved] = useState(false);
-
-	useEffect(() => {
-		const element = track.current;
-		if (!element) return;
-		let startX = 0;
-		let startScroll = 0;
-		let dragging = false;
-
-		const onScroll = () => {
-			const range = element.scrollWidth - element.clientWidth;
-			setProgress(range > 0 ? element.scrollLeft / range : 0);
-			if (element.scrollLeft > 8) setMoved(true);
-		};
-		const onDown = (event: PointerEvent) => {
-			if (event.pointerType !== "mouse") return;
-			dragging = true;
-			startX = event.clientX;
-			startScroll = element.scrollLeft;
-			element.classList.add("is-dragging");
-			element.setPointerCapture(event.pointerId);
-		};
-		const onMove = (event: PointerEvent) => {
-			if (dragging) element.scrollLeft = startScroll - (event.clientX - startX);
-		};
-		const onUp = () => {
-			dragging = false;
-			element.classList.remove("is-dragging");
-		};
-
-		onScroll();
-		element.addEventListener("scroll", onScroll, { passive: true });
-		element.addEventListener("pointerdown", onDown);
-		element.addEventListener("pointermove", onMove);
-		element.addEventListener("pointerup", onUp);
-		element.addEventListener("pointercancel", onUp);
-		return () => {
-			element.removeEventListener("scroll", onScroll);
-			element.removeEventListener("pointerdown", onDown);
-			element.removeEventListener("pointermove", onMove);
-			element.removeEventListener("pointerup", onUp);
-			element.removeEventListener("pointercancel", onUp);
-		};
-	}, []);
+	const { progress, moved } = useDragScroll(track);
 
 	return (
 		<section className="reel" id="reasons">
@@ -88,7 +45,7 @@ export function ReasonReel({ copy }: { copy: ReasonReelCopy }) {
 							loading="lazy"
 							draggable={false}
 							width={560}
-							height={1149}
+							height={1170}
 						/>
 					</figure>
 				))}

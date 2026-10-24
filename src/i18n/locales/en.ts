@@ -64,6 +64,11 @@ export const en: Messages = {
 			title: "See it on a body before you decide.",
 			body: "Young women, young men and mature men — from cute to office-ready, every outfit in a wardrobe can become a try-on preview.",
 			note: "All people shown are AI-generated virtual models; the clothes come from a real wardrobe.",
+			all: "All",
+			hint: "Swipe sideways, or tap any look to enlarge",
+			close: "Close",
+			prev: "Previous",
+			next: "Next",
 			items: [
 				{
 					src: "/ootd/c02.webp",
@@ -169,8 +174,8 @@ export const en: Messages = {
 			headline: { label: "Pick #1", score: 100, unit: "pts" },
 			hint: "Keep scrolling",
 			chips: [
-				"Style = commute / formal ✓",
-				"Formality suits the office",
+				"Season = autumn ✓",
+				"Neutral base with a denim-blue accent",
 				"No temperature given, assuming autumn",
 			],
 		},
@@ -179,13 +184,13 @@ export const en: Messages = {
 			title: "Several outfits at once, each with its reasons.",
 			hint: "Swipe sideways for more",
 			items: [
-				"Blue + black · commute · 100 pts",
 				"White + black · commute · 100 pts",
 				"White + denim blue · casual · 100 pts",
 				"Black + grey · casual · 100 pts",
-				"Beige + denim blue · casual · 92 pts",
-				"Grey · casual · 100 pts",
-				"Black + brown · casual · 100 pts",
+				"Beige + denim blue · casual · 98 pts",
+				"White + black · casual · 92 pts",
+				"Green + brown · everyday · 90 pts",
+				"White + grey · casual · 87 pts",
 			],
 		},
 		lab: {
