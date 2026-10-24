@@ -901,6 +901,33 @@ button:hover .roll > span {
   font-size: 1.05rem;
   line-height: 1.75;
 }
+.process-plain {
+  display: grid;
+  gap: 0.6rem;
+  margin: 1.4rem 0 0;
+}
+.process-plain > div {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: baseline;
+  gap: 0.75rem;
+}
+.process-plain dt {
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  background: var(--c-lilac);
+  color: #0d0d0f;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+.process-plain dd {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.55;
+}
 .process-frame {
   background: #fff;
 }

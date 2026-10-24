@@ -507,6 +507,16 @@ export function HomePage() {
 								<p className="process-tag">{step.tag}</p>
 								<h3 className="process-title">{step.title}</h3>
 								<p className="process-body">{step.body}</p>
+								<dl className="process-plain">
+									<div>
+										<dt>{copy.process.labels.you}</dt>
+										<dd>{step.plain.you}</dd>
+									</div>
+									<div>
+										<dt>{copy.process.labels.get}</dt>
+										<dd>{step.plain.get}</dd>
+									</div>
+								</dl>
 							</div>
 							<figure className="frame process-frame" data-cursor={step.tag}>
 								<div className="frame-bar" aria-hidden="true">

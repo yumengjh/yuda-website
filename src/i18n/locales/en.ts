@@ -181,29 +181,46 @@ export const en: Messages = {
 		process: {
 			eyebrow: "How it works",
 			title: "From a single photo to a full outfit.",
+			labels: { you: "You do", get: "You get" },
 			steps: [
 				{
 					tag: "Quick intake",
 					title: "Snap one, keep one",
 					body: "Shoot in a burst without waiting. Yuda cuts out each garment, recognises its category and colour, and turns it into a sticker for you to confirm.",
+					plain: {
+						you: "Take a photo, or pick many from your album at once.",
+						get: "Clean garment stickers with category and colour already filled in — edit any time.",
+					},
 					image: "/shots/quick-intake.jpg",
 				},
 				{
 					tag: "Wardrobe",
 					title: "See everything you own",
 					body: "Filter by exact colour, search with a sentence or a photo. Similar items are flagged: you might already have this one.",
+					plain: {
+						you: "Type “white trousers” in the search box, or tap a colour or category.",
+						get: "The piece you want in seconds; near-duplicates are flagged as “you may already own this”.",
+					},
 					image: "/shots/wardrobe.jpg",
 				},
 				{
 					tag: "Today",
 					title: "Today, already styled",
 					body: "Full outfits based on weather, occasion and taste. Swap the set or a single piece — your feedback keeps teaching it.",
+					plain: {
+						you: "Pick an occasion; temperature is optional and defaults to the date.",
+						get: "A few full outfits, each with a score and reasons; swap the set or one piece if you don't like it.",
+					},
 					image: "/shots/today-outfits.jpg",
 				},
 				{
 					tag: "Boards",
 					title: "Style it by hand",
 					body: "Drag stickers onto boards: multiple boards, layers, transforms, export. Save the looks you like and wear them any day.",
+					plain: {
+						you: "Drag the pieces you like onto a board and arrange them.",
+						get: "Saved looks to wear next time, and a try-on preview to check first.",
+					},
 					image: "/shots/workspace.jpg",
 				},
 			],
