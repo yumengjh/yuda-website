@@ -13,6 +13,7 @@ import { useSmoothScroll } from "../motion/SmoothScroll";
 import { Sticker, type StickerKind } from "../Sticker";
 import { OotdLooks } from "./OotdLooks";
 import { PromoFilm } from "./PromoFilm";
+import { QuickFacts } from "./QuickFacts";
 import { ReasonReel } from "./ReasonReel";
 import { StickerLab } from "./StickerLab";
 import { CtaBlock } from "./shared";
@@ -439,6 +440,8 @@ export function HomePage() {
 					</span>
 				</div>
 			</section>
+
+			<QuickFacts copy={copy.quick} />
 
 			<section
 				className="marquee"

@@ -41,7 +41,7 @@ export const en: Messages = {
 		hero: {
 			eyebrow: "AI digital wardrobe",
 			lines: ["Snap one.", "Keep one."],
-			sub: "Yuda turns casual photos into clean garment stickers, then puts together today's outfit for the weather and the occasion.",
+			sub: "Snap your clothes into a phone wardrobe — auto cut-out and sorting — then get full outfits for the weather and occasion, each with its reasons.",
 			primary: "Open Yuda",
 			secondary: "See how it works",
 			scroll: "Scroll",
@@ -59,6 +59,47 @@ export const en: Messages = {
 		],
 		manifesto:
 			"The more clothes you own, the less you seem to wear. Yuda first shows you what you actually have, then picks today's outfit from it — no guessing, and every look comes with its reasons.",
+		quick: {
+			eyebrow: "30-second tour",
+			title: "What Yuda does for you",
+			items: [
+				{
+					key: "1",
+					title: "Snap to add",
+					body: "One photo, auto cut-out, category and colour detected, saved as a clean garment sticker.",
+				},
+				{
+					key: "2",
+					title: "Find in a sentence",
+					body: "Filter by colour or category, type “white trousers” or upload a photo; near-duplicates are flagged.",
+				},
+				{
+					key: "3",
+					title: "What to wear today",
+					body: "Full outfits for the weather and occasion, swap one piece or the whole set; every look shows its score and reasons.",
+				},
+				{
+					key: "4",
+					title: "Build on a board",
+					body: "Drag stickers onto a board, use several boards, save looks to wear later.",
+				},
+				{
+					key: "5",
+					title: "Try-on preview",
+					body: "Generate an AI-model preview before you decide; paid generation only runs after you confirm.",
+				},
+				{
+					key: "6",
+					title: "Ask the assistant",
+					body: "One sentence to search the wardrobe, check an outfit or edit a board — every step is traceable.",
+				},
+			],
+			facts: [
+				"Phone and desktop",
+				"Invite-only beta",
+				"Full garment details never go to the language model",
+			],
+		},
 		looks: {
 			eyebrow: "OOTD try-on",
 			title: "See it on a body before you decide.",
