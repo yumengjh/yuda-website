@@ -7,13 +7,9 @@ interface ReasonReelCopy {
 	items: string[];
 }
 
-const cards = [
-	"/shots/reason-1.webp",
-	"/shots/reason-2.webp",
-	"/shots/reason-3.webp",
-];
+const cards = [1, 2, 3, 4, 5, 6, 7].map((n) => `/shots/reason-${n}.webp`);
 
-/** Three real recommendation cards in a sideways scroller, with a hint, a progress bar and mouse dragging. */
+/** Real recommendation cards in a sideways scroller, with a hint, a progress bar and mouse dragging. */
 export function ReasonReel({ copy }: { copy: ReasonReelCopy }) {
 	const track = useRef<HTMLDivElement>(null);
 	const [progress, setProgress] = useState(0);

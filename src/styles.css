@@ -2398,6 +2398,7 @@ button:hover .roll > span {
 }
 .reel-track {
   display: flex;
+  align-items: flex-start;
   gap: clamp(0.9rem, 2vw, 1.5rem);
   padding: 0.5rem max(1.25rem, calc((100% - 84rem) / 2)) 1.25rem;
   overflow-x: auto;

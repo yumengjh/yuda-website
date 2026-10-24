@@ -175,13 +175,17 @@ export const en: Messages = {
 			],
 		},
 		reel: {
-			eyebrow: "Three for one day",
+			eyebrow: "A day of picks",
 			title: "Several outfits at once, each with its reasons.",
 			hint: "Swipe sideways for more",
 			items: [
 				"Blue + black · commute · 100 pts",
-				"Grey · casual · 99 pts",
-				"Black + brown · casual · 97 pts",
+				"White + black · commute · 100 pts",
+				"White + denim blue · casual · 100 pts",
+				"Black + grey · casual · 100 pts",
+				"Beige + denim blue · casual · 92 pts",
+				"Grey · casual · 100 pts",
+				"Black + brown · casual · 100 pts",
 			],
 		},
 		lab: {
