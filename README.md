@@ -61,7 +61,7 @@ pnpm dev               # http://localhost:3000
 | 变量 | 说明 |
 | --- | --- |
 | `VITE_SITE_URL` | 官网正式域名（生产必须是 HTTPS），用于 canonical、sitemap 和 OG |
-| `VITE_SITE_APP_URL` | “进入鱼搭”等按钮指向的用户端地址，默认 `https://yuda.yumg.cn/` |
+| `VITE_SITE_APP_URL` | “进入鱼搭”等按钮指向的用户端地址，默认是占位地址 `https://app.example.com/`，正式构建在本机 `.env.production.local` 填写 |
 | `VITE_SITE_NAME` 等 | 其余同模板，见 `.env.example` |
 
 | 命令 | 用途 |

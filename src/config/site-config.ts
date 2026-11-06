@@ -19,9 +19,9 @@ const defaults = {
 	description:
 		"鱼搭：拍照入柜、自动整理、按天气与场景推荐今天穿什么的 AI 数字衣柜。",
 	author: "鱼搭",
-	appUrl: "https://yuda.yumg.cn/",
+	appUrl: "https://app.example.com/",
 	ogImage: "/og-default.png",
-	promoVideoUrl: "https://cdntc.yumg.cn/yuda/yuda-promo.mp4",
+	promoVideoUrl: "https://cdn.example.com/yuda-promo.mp4",
 	promoPoster: "/shots/promo-poster.jpg",
 	githubUrl: "https://github.com/your-org/your-project",
 	titleSeparator: " | ",

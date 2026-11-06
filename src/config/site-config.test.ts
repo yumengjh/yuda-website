@@ -6,10 +6,10 @@ describe("createSiteConfig", () => {
 	it("uses safe template defaults when no public environment variables are set", () => {
 		expect(createSiteConfig({})).toMatchObject({
 			name: "鱼搭",
-			appUrl: "https://yuda.yumg.cn/",
+			appUrl: "https://app.example.com/",
 			url: "https://example.com",
 			ogImage: "/og-default.png",
-			promoVideoUrl: "https://cdntc.yumg.cn/yuda/yuda-promo.mp4",
+			promoVideoUrl: "https://cdn.example.com/yuda-promo.mp4",
 			promoPoster: "/shots/promo-poster.jpg",
 			titleSeparator: " | ",
 			navigationProgress: true,
